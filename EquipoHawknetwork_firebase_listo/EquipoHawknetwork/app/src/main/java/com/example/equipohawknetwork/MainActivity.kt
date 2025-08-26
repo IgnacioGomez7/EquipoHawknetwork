@@ -17,4 +17,14 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
+
+override fun onStart() {
+    super.onStart()
+    val user = com.google.firebase.auth.FirebaseAuth.getInstance().currentUser
+    if (user == null || user.isEmailVerified == false) {
+        startActivity(android.content.Intent(this, AuthActivity::class.java))
+        finish()
+    }
+}
+
 }
