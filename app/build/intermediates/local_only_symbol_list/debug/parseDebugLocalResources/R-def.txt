@@ -1,0 +1,19 @@
+R_DEF: Internal format may change without notice
+local
+id authContainer
+id btnGoToLogin
+id btnGoToRegister
+id btnLogin
+id btnLogout
+id btnRegister
+id etConfirm
+id etEmail
+id etName
+id etPassword
+id tvWelcome
+layout activity_auth
+layout activity_main
+layout fragment_login
+layout fragment_register
+string app_name
+style Theme.LocalAuthDemo

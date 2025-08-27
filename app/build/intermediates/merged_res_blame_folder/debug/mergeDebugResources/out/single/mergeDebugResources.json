@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "com.example.localauthdemo.app-debug-35:/layout_activity_main.xml.flat",
+        "source": "com.example.localauthdemo.app-main-37:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.localauthdemo.app-debug-35:/layout_fragment_login.xml.flat",
+        "source": "com.example.localauthdemo.app-main-37:/layout/fragment_login.xml"
+    },
+    {
+        "merged": "com.example.localauthdemo.app-debug-35:/layout_activity_auth.xml.flat",
+        "source": "com.example.localauthdemo.app-main-37:/layout/activity_auth.xml"
+    },
+    {
+        "merged": "com.example.localauthdemo.app-debug-35:/layout_fragment_register.xml.flat",
+        "source": "com.example.localauthdemo.app-main-37:/layout/fragment_register.xml"
+    }
+]
