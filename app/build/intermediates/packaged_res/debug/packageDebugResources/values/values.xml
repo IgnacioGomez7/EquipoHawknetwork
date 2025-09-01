@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#2C3E50</color>
+    <string name="app_name">GymTracker Firebase</string>
+    <string name="gcm_defaultSenderId" translatable="false">2851900901</string>
+    <string name="google_api_key" translatable="false">AIzaSyB0zAgNTxfGz7WjPG0i3pFH4uyJZ5UJGuE</string>
+    <string name="google_app_id" translatable="false">1:2851900901:android:1b2375ab1eb4cb4da2b30c</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyB0zAgNTxfGz7WjPG0i3pFH4uyJZ5UJGuE</string>
+    <string name="google_storage_bucket" translatable="false">hawknetwork-eda80.firebasestorage.app</string>
+    <string name="project_id" translatable="false">hawknetwork-eda80</string>
+    <style name="Theme.App" parent="Theme.Material3.DayNight.NoActionBar">
+        
+    </style>
+</resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "2851900901",
+    "project_id": "hawknetwork-eda80",
+    "storage_bucket": "hawknetwork-eda80.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2851900901:android:1b2375ab1eb4cb4da2b30c",
+        "android_client_info": {
+          "package_name": "com.example.equipohawknetwork"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0zAgNTxfGz7WjPG0i3pFH4uyJZ5UJGuE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
