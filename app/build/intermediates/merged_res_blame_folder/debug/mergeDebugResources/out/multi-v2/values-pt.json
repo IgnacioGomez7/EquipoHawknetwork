@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.equipohawknetwork.app-mergeDebugResources-41:/values-pt/values-pt.xml",
+            "outputFile": "com.example.equipohawknetwork.app-mergeDebugResources-3:/values-pt/values-pt.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Willf\\.gradle\\caches\\8.13\\transforms\\f2df2008dcca089b63d705f1a2fc067a\\transformed\\jetified-credentials-1.2.0-rc01\\res\\values-pt\\values-pt.xml",

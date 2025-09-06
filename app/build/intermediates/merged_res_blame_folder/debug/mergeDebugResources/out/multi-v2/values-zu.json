@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.equipohawknetwork.app-mergeDebugResources-41:/values-zu/values-zu.xml",
+            "outputFile": "com.example.equipohawknetwork.app-mergeDebugResources-3:/values-zu/values-zu.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Willf\\.gradle\\caches\\8.13\\transforms\\94129f9cc31d6c77f6af02b9d24a981d\\transformed\\material-1.12.0\\res\\values-zu\\values-zu.xml",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Willf\\.gradle\\caches\\8.13\\transforms\\4e970d25b1f3fddf442a18d380d82512\\transformed\\jetified-play-services-base-18.1.0\\res\\values-zu\\values.xml",
+                    "source": "C:\\Users\\Willf\\.gradle\\caches\\8.13\\transforms\\5bfa2bde79f874ebde99c9d8a2dff440\\transformed\\jetified-play-services-base-18.5.0\\res\\values-zu\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -40,7 +40,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Willf\\.gradle\\caches\\8.13\\transforms\\85dbabf2bf6eec45ac14aa6f491c5169\\transformed\\jetified-play-services-basement-18.4.0\\res\\values-zu\\values.xml",
+                    "source": "C:\\Users\\Willf\\.gradle\\caches\\8.13\\transforms\\4b39191da1fbbfadd9a31064956a006a\\transformed\\jetified-play-services-basement-18.5.0\\res\\values-zu\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

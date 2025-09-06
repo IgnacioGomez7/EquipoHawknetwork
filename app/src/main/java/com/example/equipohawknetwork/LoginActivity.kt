@@ -10,6 +10,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
+import com.example.equipohawknetwork.AppAnalytics
 
 class LoginActivity : AppCompatActivity() {
 
@@ -36,7 +37,11 @@ class LoginActivity : AppCompatActivity() {
         val user = auth.currentUser
         if (user != null) {
             user.reload().addOnCompleteListener {
-                if (auth.currentUser?.isEmailVerified == true) goToMain()
+                if (auth.currentUser?.isEmailVerified == true) {
+                    // 🔹 Analytics: usuario detectado como verificado al abrir
+                    AppAnalytics.verified(this)
+                    goToMain()
+                }
             }
         }
     }
@@ -57,6 +62,8 @@ class LoginActivity : AppCompatActivity() {
                     val u = auth.currentUser
                     if (u != null && u.isEmailVerified) {
                         ensureUserDoc(u)
+                        // 🔹 Analytics: login exitoso con usuario verificado
+                        AppAnalytics.login(this)
                         goToMain()
                     } else {
                         binding.tvEstado.text = "Tu correo no está verificado. Revisa tu bandeja o pulsa Reenviar."
@@ -77,6 +84,8 @@ class LoginActivity : AppCompatActivity() {
         }
         user.sendEmailVerification()
             .addOnSuccessListener {
+                // 🔹 Analytics: correo de verificación reenviado
+                AppAnalytics.verificationSent(this)
                 toast("Correo de verificación enviado")
                 try { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("mailto:"))) } catch (_: Exception) {}
             }

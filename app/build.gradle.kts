@@ -29,6 +29,7 @@ android {
 dependencies {
     // Firebase BoM (controla versiones)
     implementation(platform("com.google.firebase:firebase-bom:34.2.0"))
+    implementation("com.google.firebase:firebase-analytics")
 
     // Firebase (sin versión explícita)
     implementation("com.google.firebase:firebase-auth")

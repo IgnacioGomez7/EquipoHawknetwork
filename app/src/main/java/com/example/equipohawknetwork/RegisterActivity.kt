@@ -9,6 +9,7 @@ import com.example.equipohawknetwork.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
+import com.example.equipohawknetwork.AppAnalytics
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -46,6 +47,10 @@ class RegisterActivity : AppCompatActivity() {
                 val user = res.user ?: run {
                     fail("No se pudo crear el usuario"); binding.btnRegistrar.isEnabled = true; return@addOnSuccessListener
                 }
+
+                // 🔹 Analytics: registro exitoso (Auth)
+                AppAnalytics.signUp(this)
+
                 val uid = user.uid
                 db.collection("users").document(uid)
                     .set(
@@ -59,6 +64,9 @@ class RegisterActivity : AppCompatActivity() {
                     .addOnSuccessListener {
                         user.sendEmailVerification()
                             .addOnSuccessListener {
+                                // 🔹 Analytics: correo de verificación enviado
+                                AppAnalytics.verificationSent(this)
+
                                 binding.tvEstado.text = "Cuenta creada. Te enviamos un correo de verificación."
                                 toast("Verifica tu correo y luego inicia sesión")
                                 FirebaseAuth.getInstance().signOut()

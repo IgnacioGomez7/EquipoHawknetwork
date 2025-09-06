@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.equipohawknetwork.app-mergeDebugResources-41:/values-v31/values-v31.xml",
+            "outputFile": "com.example.equipohawknetwork.app-mergeDebugResources-3:/values-v31/values-v31.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Willf\\.gradle\\caches\\8.13\\transforms\\94129f9cc31d6c77f6af02b9d24a981d\\transformed\\material-1.12.0\\res\\values-v31\\values-v31.xml",

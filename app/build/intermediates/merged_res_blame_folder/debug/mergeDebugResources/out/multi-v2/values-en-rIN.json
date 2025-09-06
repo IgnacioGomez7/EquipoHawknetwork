@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.equipohawknetwork.app-mergeDebugResources-41:/values-en-rIN/values-en-rIN.xml",
+            "outputFile": "com.example.equipohawknetwork.app-mergeDebugResources-3:/values-en-rIN/values-en-rIN.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Willf\\.gradle\\caches\\8.13\\transforms\\c98de619c48816ab3615dc127da01105\\transformed\\core-1.13.1\\res\\values-en-rIN\\values-en-rIN.xml",
