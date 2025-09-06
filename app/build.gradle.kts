@@ -2,6 +2,8 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.google.gms.google-services")
+    //crashlytics
+    id("com.google.firebase.crashlytics")
 }
 
 android {
@@ -31,10 +33,13 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:34.2.0"))
     implementation("com.google.firebase:firebase-analytics")
 
+    //crashlytics
+    implementation("com.google.firebase:firebase-crashlytics")
+
     // Firebase (sin versión explícita)
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-firestore")
-    // (Si prefieres, puedes usar los -ktx: auth-ktx / firestore-ktx)
+
 
     // AndroidX / Material
     implementation("androidx.core:core-ktx:1.13.1")
