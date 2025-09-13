@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         }
         FirebaseCrashlytics.getInstance().log("MainActivity onCreate")
 
-        // 👇 Prueba mínima: escribe “hola” en Firestore al entrar (para validar conexión)
+        // Prueba mínima: escribe “hola” en Firestore al entrar (para validar conexión)
         val db = FirebaseFirestore.getInstance()
         val data = mapOf("mensaje" to "hola", "timestamp" to FieldValue.serverTimestamp())
         db.collection("pruebas").add(data)
@@ -36,10 +36,10 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Error Firestore: ${e.localizedMessage}", Toast.LENGTH_LONG).show()
             }
 
-        // === ADD-ONLY: Botones en Dashboard ===
+        // === Botones en Dashboard ===
         val root = findViewById<ViewGroup>(android.R.id.content)
 
-        // Botón: Cerrar sesión (siempre visible)
+        // Botón: Cerrar sesión
         val btnLogout = Button(this).apply {
             text = "Cerrar sesión"
             setOnClickListener {
@@ -56,27 +56,22 @@ class MainActivity : AppCompatActivity() {
             ).apply { topMargin = 24 }
         )
 
-        // Botón: Crash de prueba (solo en Debug; sin BuildConfig)
-        if (isDebugBuild()) {
-            val btnCrash = Button(this).apply {
-                text = "Crash de prueba (debug)"
-                setOnClickListener {
-                    FirebaseCrashlytics.getInstance().log("User tapped debug crash button on MainActivity")
-                    FirebaseAuth.getInstance().currentUser?.uid?.let {
-                        FirebaseCrashlytics.getInstance().setUserId(it)
-                    }
-                    throw RuntimeException("Crash de prueba Crashlytics")
-                }
+        // Botón: Eventos (Compose) — abre la nueva Activity con NavHost (lista ↔ formulario)
+        val btnEvents = Button(this).apply {
+            text = "Eventos (Compose)"
+            setOnClickListener {
+                startActivity(Intent(this@MainActivity, EventsActivity::class.java))
             }
-            root.addView(
-                btnCrash,
-                ViewGroup.MarginLayoutParams(
-                    ViewGroup.LayoutParams.WRAP_CONTENT,
-                    ViewGroup.LayoutParams.WRAP_CONTENT
-                ).apply { topMargin = 96 }
-            )
         }
-        // === END ADD-ONLY ===
+        root.addView(
+            btnEvents,
+            ViewGroup.MarginLayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            ).apply { topMargin = 96 } // debajo del logout
+        )
+
+        // 🔴 Se eliminó el botón de "Crash de prueba (debug)" de Crashlytics (único cambio destructivo)
     }
 
     override fun onStart() {
@@ -89,8 +84,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    /** True si la app está en modo debug (sin usar BuildConfig). */
+    /** True si la app está en modo debug (puedes dejarlo aunque ya no se use). */
     private fun isDebugBuild(): Boolean {
         return (applicationInfo.flags and android.content.pm.ApplicationInfo.FLAG_DEBUGGABLE) != 0
     }
 }
+

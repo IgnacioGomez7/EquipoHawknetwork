@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.equipohawknetwork.app-mergeDebugResources-5:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.example.equipohawknetwork.app-mergeDebugResources-4:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Willf\\.gradle\\caches\\8.13\\transforms\\343d1439c7b0e480871451126fb8ec93\\transformed\\appcompat-1.7.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\Willf\\.gradle\\caches\\8.13\\transforms\\efa6c149339b1eba54a2b7ae197a6a48\\transformed\\appcompat-1.7.0\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Willf\\.gradle\\caches\\8.13\\transforms\\eac493d16f051e29a57b23ebe55664d0\\transformed\\material-1.12.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\Willf\\.gradle\\caches\\8.13\\transforms\\7dff2c0b94b58110c4bc7bbbf0d48ca2\\transformed\\material-1.12.0\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

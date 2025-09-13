@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.equipohawknetwork.app-mergeDebugResources-5:/values-v28/values-v28.xml",
+            "outputFile": "com.example.equipohawknetwork.app-mergeDebugResources-4:/values-v28/values-v28.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Willf\\.gradle\\caches\\8.13\\transforms\\eac493d16f051e29a57b23ebe55664d0\\transformed\\material-1.12.0\\res\\values-v28\\values-v28.xml",
+                    "source": "C:\\Users\\Willf\\.gradle\\caches\\8.13\\transforms\\7dff2c0b94b58110c4bc7bbbf0d48ca2\\transformed\\material-1.12.0\\res\\values-v28\\values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Willf\\.gradle\\caches\\8.13\\transforms\\343d1439c7b0e480871451126fb8ec93\\transformed\\appcompat-1.7.0\\res\\values-v28\\values-v28.xml",
+                    "source": "C:\\Users\\Willf\\.gradle\\caches\\8.13\\transforms\\efa6c149339b1eba54a2b7ae197a6a48\\transformed\\appcompat-1.7.0\\res\\values-v28\\values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,8",
                         "startColumns": "4,4,4,4",

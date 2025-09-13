@@ -1,14 +1,14 @@
 [
     {
-        "merged": "com.example.equipohawknetwork.app-mergeDebugResources-6:/layout/activity_register.xml",
-        "source": "com.example.equipohawknetwork.app-main-9:/layout/activity_register.xml"
+        "merged": "com.example.equipohawknetwork.app-mergeDebugResources-5:/layout/activity_register.xml",
+        "source": "com.example.equipohawknetwork.app-main-8:/layout/activity_register.xml"
     },
     {
-        "merged": "com.example.equipohawknetwork.app-mergeDebugResources-6:/layout/activity_login.xml",
-        "source": "com.example.equipohawknetwork.app-main-9:/layout/activity_login.xml"
+        "merged": "com.example.equipohawknetwork.app-mergeDebugResources-5:/layout/activity_login.xml",
+        "source": "com.example.equipohawknetwork.app-main-8:/layout/activity_login.xml"
     },
     {
-        "merged": "com.example.equipohawknetwork.app-mergeDebugResources-6:/layout/activity_main.xml",
-        "source": "com.example.equipohawknetwork.app-main-9:/layout/activity_main.xml"
+        "merged": "com.example.equipohawknetwork.app-mergeDebugResources-5:/layout/activity_main.xml",
+        "source": "com.example.equipohawknetwork.app-main-8:/layout/activity_main.xml"
     }
 ]

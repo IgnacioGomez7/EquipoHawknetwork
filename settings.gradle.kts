@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "EquipoHawknetwork" // o el nombre que quieras
+rootProject.name = "EquipoHawknetwork"
 include(":app")

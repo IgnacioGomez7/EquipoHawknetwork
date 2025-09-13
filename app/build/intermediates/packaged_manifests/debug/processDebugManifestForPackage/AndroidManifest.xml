@@ -24,6 +24,7 @@
     <uses-permission android:name="com.example.equipohawknetwork.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
+        android:name="com.example.equipohawknetwork.MyApp"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
@@ -35,15 +36,15 @@
         android:testOnly="true"
         android:theme="@style/Theme.Material3.DayNight.NoActionBar" >
 
-        <!-- MainActivity protegida (sin launcher) -->
+        <!-- Pantalla principal protegida (NO launcher) -->
         <activity
             android:name="com.example.equipohawknetwork.MainActivity"
-            android:exported="false" />
-
-        <!-- Register (no launcher) -->
-        <activity
-            android:name="com.example.equipohawknetwork.RegisterActivity"
             android:exported="true" />
+
+        <!-- Nueva pantalla Compose de eventos -->
+        <activity
+            android:name="com.example.equipohawknetwork.EventsActivity"
+            android:exported="false" />
 
         <!-- Login como pantalla inicial -->
         <activity
@@ -55,22 +56,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <provider
-            android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.example.equipohawknetwork.androidx-startup"
-            android:exported="false" >
-            <meta-data
-                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-                android:value="androidx.startup" />
-            <meta-data
-                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-                android:value="androidx.startup" />
-            <meta-data
-                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-                android:value="androidx.startup" />
-        </provider>
-
         <activity
             android:name="com.google.firebase.auth.internal.GenericIdpActivity"
             android:excludeFromRecents="true"
@@ -200,6 +185,25 @@
             android:directBootAware="true"
             android:exported="false"
             android:initOrder="100" />
+
+        <activity
+            android:name="androidx.compose.ui.tooling.PreviewActivity"
+            android:exported="true" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.example.equipohawknetwork.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup" />
+        </provider>
 
         <uses-library
             android:name="android.ext.adservices"
