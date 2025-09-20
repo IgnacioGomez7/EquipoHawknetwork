@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.equipohawknetwork.app-mergeDebugResources-4:/values-v23/values-v23.xml",
+            "outputFile": "com.example.equipohawknetwork.app-mergeDebugResources-86:/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Willf\\.gradle\\caches\\8.13\\transforms\\e5efebdaef30c64eaa4400cbe767f60e\\transformed\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\nacho\\.gradle\\caches\\8.13\\transforms\\e5efebdaef30c64eaa4400cbe767f60e\\transformed\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Willf\\.gradle\\caches\\8.13\\transforms\\efa6c149339b1eba54a2b7ae197a6a48\\transformed\\appcompat-1.7.0\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\nacho\\.gradle\\caches\\8.13\\transforms\\efa6c149339b1eba54a2b7ae197a6a48\\transformed\\appcompat-1.7.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,39,43,44,45,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -34,7 +34,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Willf\\.gradle\\caches\\8.13\\transforms\\7dff2c0b94b58110c4bc7bbbf0d48ca2\\transformed\\material-1.12.0\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\nacho\\.gradle\\caches\\8.13\\transforms\\7dff2c0b94b58110c4bc7bbbf0d48ca2\\transformed\\material-1.12.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,5,9,13,16,19,22,25,28,32",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",

@@ -11,7 +11,11 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import com.example.equipohawknetwork.AppAnalytics
-
+import android.Manifest
+import android.content.pm.PackageManager
+import android.os.Build
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding

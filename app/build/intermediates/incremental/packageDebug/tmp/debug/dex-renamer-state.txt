@@ -1,18 +1,18 @@
-#Fri Sep 12 20:51:07 CST 2025
-base.0=C\:\\Documents\\ProudFitnessDdAM\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=C\:\\Documents\\ProudFitnessDdAM\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.10=C\:\\Documents\\ProudFitnessDdAM\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
-base.11=C\:\\Documents\\ProudFitnessDdAM\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
-base.12=C\:\\Documents\\ProudFitnessDdAM\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes4.dex
-base.13=C\:\\Documents\\ProudFitnessDdAM\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes5.dex
-base.2=C\:\\Documents\\ProudFitnessDdAM\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex
-base.3=C\:\\Documents\\ProudFitnessDdAM\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
-base.4=C\:\\Documents\\ProudFitnessDdAM\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
-base.5=C\:\\Documents\\ProudFitnessDdAM\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
-base.6=C\:\\Documents\\ProudFitnessDdAM\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
-base.7=C\:\\Documents\\ProudFitnessDdAM\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
-base.8=C\:\\Documents\\ProudFitnessDdAM\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
-base.9=C\:\\Documents\\ProudFitnessDdAM\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
+#Sat Sep 13 20:05:27 CST 2025
+base.0=C\:\\Users\\nacho\\AndroidStudioProjects\\NuevoEquipoHawkNetwork\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\Users\\nacho\\AndroidStudioProjects\\NuevoEquipoHawkNetwork\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.10=C\:\\Users\\nacho\\AndroidStudioProjects\\NuevoEquipoHawkNetwork\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.11=C\:\\Users\\nacho\\AndroidStudioProjects\\NuevoEquipoHawkNetwork\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
+base.12=C\:\\Users\\nacho\\AndroidStudioProjects\\NuevoEquipoHawkNetwork\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes4.dex
+base.13=C\:\\Users\\nacho\\AndroidStudioProjects\\NuevoEquipoHawkNetwork\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes5.dex
+base.2=C\:\\Users\\nacho\\AndroidStudioProjects\\NuevoEquipoHawkNetwork\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex
+base.3=C\:\\Users\\nacho\\AndroidStudioProjects\\NuevoEquipoHawkNetwork\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
+base.4=C\:\\Users\\nacho\\AndroidStudioProjects\\NuevoEquipoHawkNetwork\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
+base.5=C\:\\Users\\nacho\\AndroidStudioProjects\\NuevoEquipoHawkNetwork\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
+base.6=C\:\\Users\\nacho\\AndroidStudioProjects\\NuevoEquipoHawkNetwork\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
+base.7=C\:\\Users\\nacho\\AndroidStudioProjects\\NuevoEquipoHawkNetwork\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
+base.8=C\:\\Users\\nacho\\AndroidStudioProjects\\NuevoEquipoHawkNetwork\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
+base.9=C\:\\Users\\nacho\\AndroidStudioProjects\\NuevoEquipoHawkNetwork\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.10=classes2.dex
