@@ -7,10 +7,14 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.equipohawknetwork.push.FcmDebug
+import com.example.equipohawknetwork.push.FcmTokenManager
+import com.example.equipohawknetwork.push.NotificationPermissionHelper
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.crashlytics.FirebaseCrashlytics
+import com.google.firebase.messaging.FirebaseMessaging
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,7 +28,13 @@ class MainActivity : AppCompatActivity() {
         }
         FirebaseCrashlytics.getInstance().log("MainActivity onCreate")
 
-        // Prueba mínima: escribe “hola” en Firestore al entrar (para validar conexión)
+        // Permiso de notificaciones (Android 13+)
+        NotificationPermissionHelper.requestIfNeeded(this)
+
+        // Obtener/guardar token FCM si hay usuario
+        FcmTokenManager.fetchAndSaveIfLoggedIn()
+
+        // Prueba mínima Firestore
         val db = FirebaseFirestore.getInstance()
         val data = mapOf("mensaje" to "hola", "timestamp" to FieldValue.serverTimestamp())
         db.collection("pruebas").add(data)
@@ -39,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         // === Botones en Dashboard ===
         val root = findViewById<ViewGroup>(android.R.id.content)
 
-        // Botón: Cerrar sesión
+        // Cerrar sesión
         val btnLogout = Button(this).apply {
             text = "Cerrar sesión"
             setOnClickListener {
@@ -56,7 +66,7 @@ class MainActivity : AppCompatActivity() {
             ).apply { topMargin = 24 }
         )
 
-        // Botón: Eventos (Compose) — abre la nueva Activity con NavHost (lista ↔ formulario)
+        // Eventos (Compose)
         val btnEvents = Button(this).apply {
             text = "Eventos (Compose)"
             setOnClickListener {
@@ -68,10 +78,43 @@ class MainActivity : AppCompatActivity() {
             ViewGroup.MarginLayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT
-            ).apply { topMargin = 96 } // debajo del logout
+            ).apply { topMargin = 96 }
         )
 
-        // 🔴 Se eliminó el botón de "Crash de prueba (debug)" de Crashlytics (único cambio destructivo)
+        // Mostrar/copiar token FCM
+        val btnShowToken = Button(this).apply {
+            text = "Mostrar token FCM"
+            setOnClickListener {
+                FcmDebug.copyCurrentToken(this@MainActivity) { token ->
+                    FcmTokenManager.saveTokenIfLoggedIn(token)
+                }
+            }
+        }
+        root.addView(
+            btnShowToken,
+            ViewGroup.MarginLayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            ).apply { topMargin = 168 }
+        )
+
+        // Suscribirse al tópico "test"
+        val btnSubscribe = Button(this).apply {
+            text = "Suscribirme al tema 'test'"
+            setOnClickListener {
+                FirebaseMessaging.getInstance().subscribeToTopic("test")
+                    .addOnCompleteListener {
+                        Toast.makeText(this@MainActivity, "Suscrito a 'test'", Toast.LENGTH_SHORT).show()
+                    }
+            }
+        }
+        root.addView(
+            btnSubscribe,
+            ViewGroup.MarginLayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            ).apply { topMargin = 240 }
+        )
     }
 
     override fun onStart() {
@@ -83,10 +126,4 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
     }
-
-    /** True si la app está en modo debug (puedes dejarlo aunque ya no se use). */
-    private fun isDebugBuild(): Boolean {
-        return (applicationInfo.flags and android.content.pm.ApplicationInfo.FLAG_DEBUGGABLE) != 0
-    }
 }
-
