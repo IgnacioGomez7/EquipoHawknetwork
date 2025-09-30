@@ -1,20 +1,21 @@
 package com.example.equipohawknetwork
 
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.equipohawknetwork.push.FcmDebug
-import com.example.equipohawknetwork.push.FcmTokenManager
-import com.example.equipohawknetwork.push.NotificationPermissionHelper
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.messaging.FirebaseMessaging
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,19 +23,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // (Opcional) Etiquetar usuario en Crashlytics si hay sesión
+        // Crashlytics: etiqueta uid si hay sesión (se mantiene)
         FirebaseAuth.getInstance().currentUser?.uid?.let {
             FirebaseCrashlytics.getInstance().setUserId(it)
         }
         FirebaseCrashlytics.getInstance().log("MainActivity onCreate")
 
-        // Permiso de notificaciones (Android 13+)
-        NotificationPermissionHelper.requestIfNeeded(this)
+        // Permiso notificaciones (Android 13+)
+        requestPostNotificationsIfNeeded()
 
-        // Obtener/guardar token FCM si hay usuario
-        FcmTokenManager.fetchAndSaveIfLoggedIn()
-
-        // Prueba mínima Firestore
+        // Prueba mínima Firestore (se mantiene)
         val db = FirebaseFirestore.getInstance()
         val data = mapOf("mensaje" to "hola", "timestamp" to FieldValue.serverTimestamp())
         db.collection("pruebas").add(data)
@@ -46,7 +44,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Error Firestore: ${e.localizedMessage}", Toast.LENGTH_LONG).show()
             }
 
-        // === Botones en Dashboard ===
+        // === Botones en Dashboard (ADD-ONLY, sin debug de FCM) ===
         val root = findViewById<ViewGroup>(android.R.id.content)
 
         // Cerrar sesión
@@ -66,7 +64,7 @@ class MainActivity : AppCompatActivity() {
             ).apply { topMargin = 24 }
         )
 
-        // Eventos (Compose)
+        // Ir a Eventos (Compose)
         val btnEvents = Button(this).apply {
             text = "Eventos (Compose)"
             setOnClickListener {
@@ -80,41 +78,7 @@ class MainActivity : AppCompatActivity() {
                 ViewGroup.LayoutParams.WRAP_CONTENT
             ).apply { topMargin = 96 }
         )
-
-        // Mostrar/copiar token FCM
-        val btnShowToken = Button(this).apply {
-            text = "Mostrar token FCM"
-            setOnClickListener {
-                FcmDebug.copyCurrentToken(this@MainActivity) { token ->
-                    FcmTokenManager.saveTokenIfLoggedIn(token)
-                }
-            }
-        }
-        root.addView(
-            btnShowToken,
-            ViewGroup.MarginLayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT
-            ).apply { topMargin = 168 }
-        )
-
-        // Suscribirse al tópico "test"
-        val btnSubscribe = Button(this).apply {
-            text = "Suscribirme al tema 'test'"
-            setOnClickListener {
-                FirebaseMessaging.getInstance().subscribeToTopic("test")
-                    .addOnCompleteListener {
-                        Toast.makeText(this@MainActivity, "Suscrito a 'test'", Toast.LENGTH_SHORT).show()
-                    }
-            }
-        }
-        root.addView(
-            btnSubscribe,
-            ViewGroup.MarginLayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT
-            ).apply { topMargin = 240 }
-        )
+        // === END ===
     }
 
     override fun onStart() {
@@ -124,6 +88,22 @@ class MainActivity : AppCompatActivity() {
         if (u == null || !u.isEmailVerified) {
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
+        }
+    }
+
+    private fun requestPostNotificationsIfNeeded() {
+        if (Build.VERSION.SDK_INT >= 33) {
+            val granted = ContextCompat.checkSelfPermission(
+                this,
+                Manifest.permission.POST_NOTIFICATIONS
+            ) == PackageManager.PERMISSION_GRANTED
+            if (!granted) {
+                ActivityCompat.requestPermissions(
+                    this,
+                    arrayOf(Manifest.permission.POST_NOTIFICATIONS),
+                    2001
+                )
+            }
         }
     }
 }

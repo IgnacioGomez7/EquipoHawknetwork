@@ -3174,6 +3174,7 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id btnGoogle
 id btnLogin
 id btnReenviar
 id btnRegistrar
@@ -3316,6 +3317,7 @@ id line3
 id linear
 id listMode
 id list_item
+id loginRoot
 id m3_side_sheet
 id marquee
 id masked
@@ -3845,6 +3847,7 @@ string common_signin_button_text_long
 string copy_toast_msg
 string default_error_message
 string default_popup_window_title
+string default_web_client_id
 string dropdown_menu
 string error_a11y_label
 string error_icon_content_description

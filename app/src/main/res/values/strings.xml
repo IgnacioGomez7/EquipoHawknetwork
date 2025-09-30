@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">GymTracker Firebase</string>
+
+    <!-- Necesario para Google Sign-In (tomado del google-services.json -> oauth_client.client_type=3) -->
+    <string name="default_web_client_id">
+        2851900901-kj6g57523144t1uo8af4um10mpp6qcjj.apps.googleusercontent.com
+    </string>
 </resources>

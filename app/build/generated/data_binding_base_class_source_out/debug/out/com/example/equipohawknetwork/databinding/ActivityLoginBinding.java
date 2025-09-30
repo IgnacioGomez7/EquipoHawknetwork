@@ -4,6 +4,9 @@ package com.example.equipohawknetwork.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -11,8 +14,6 @@ import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.equipohawknetwork.R;
-import com.google.android.material.button.MaterialButton;
-import com.google.android.material.textfield.TextInputEditText;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -22,16 +23,22 @@ public final class ActivityLoginBinding implements ViewBinding {
   private final ScrollView rootView;
 
   @NonNull
-  public final MaterialButton btnLogin;
+  public final Button btnGoogle;
 
   @NonNull
-  public final MaterialButton btnReenviar;
+  public final Button btnLogin;
 
   @NonNull
-  public final TextInputEditText etEmail;
+  public final Button btnReenviar;
 
   @NonNull
-  public final TextInputEditText etPass;
+  public final EditText etEmail;
+
+  @NonNull
+  public final EditText etPass;
+
+  @NonNull
+  public final LinearLayout loginRoot;
 
   @NonNull
   public final TextView tvEstado;
@@ -39,15 +46,17 @@ public final class ActivityLoginBinding implements ViewBinding {
   @NonNull
   public final TextView tvIrRegistro;
 
-  private ActivityLoginBinding(@NonNull ScrollView rootView, @NonNull MaterialButton btnLogin,
-      @NonNull MaterialButton btnReenviar, @NonNull TextInputEditText etEmail,
-      @NonNull TextInputEditText etPass, @NonNull TextView tvEstado,
+  private ActivityLoginBinding(@NonNull ScrollView rootView, @NonNull Button btnGoogle,
+      @NonNull Button btnLogin, @NonNull Button btnReenviar, @NonNull EditText etEmail,
+      @NonNull EditText etPass, @NonNull LinearLayout loginRoot, @NonNull TextView tvEstado,
       @NonNull TextView tvIrRegistro) {
     this.rootView = rootView;
+    this.btnGoogle = btnGoogle;
     this.btnLogin = btnLogin;
     this.btnReenviar = btnReenviar;
     this.etEmail = etEmail;
     this.etPass = etPass;
+    this.loginRoot = loginRoot;
     this.tvEstado = tvEstado;
     this.tvIrRegistro = tvIrRegistro;
   }
@@ -79,27 +88,39 @@ public final class ActivityLoginBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btnGoogle;
+      Button btnGoogle = ViewBindings.findChildViewById(rootView, id);
+      if (btnGoogle == null) {
+        break missingId;
+      }
+
       id = R.id.btnLogin;
-      MaterialButton btnLogin = ViewBindings.findChildViewById(rootView, id);
+      Button btnLogin = ViewBindings.findChildViewById(rootView, id);
       if (btnLogin == null) {
         break missingId;
       }
 
       id = R.id.btnReenviar;
-      MaterialButton btnReenviar = ViewBindings.findChildViewById(rootView, id);
+      Button btnReenviar = ViewBindings.findChildViewById(rootView, id);
       if (btnReenviar == null) {
         break missingId;
       }
 
       id = R.id.etEmail;
-      TextInputEditText etEmail = ViewBindings.findChildViewById(rootView, id);
+      EditText etEmail = ViewBindings.findChildViewById(rootView, id);
       if (etEmail == null) {
         break missingId;
       }
 
       id = R.id.etPass;
-      TextInputEditText etPass = ViewBindings.findChildViewById(rootView, id);
+      EditText etPass = ViewBindings.findChildViewById(rootView, id);
       if (etPass == null) {
+        break missingId;
+      }
+
+      id = R.id.loginRoot;
+      LinearLayout loginRoot = ViewBindings.findChildViewById(rootView, id);
+      if (loginRoot == null) {
         break missingId;
       }
 
@@ -115,8 +136,8 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityLoginBinding((ScrollView) rootView, btnLogin, btnReenviar, etEmail, etPass,
-          tvEstado, tvIrRegistro);
+      return new ActivityLoginBinding((ScrollView) rootView, btnGoogle, btnLogin, btnReenviar,
+          etEmail, etPass, loginRoot, tvEstado, tvIrRegistro);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
