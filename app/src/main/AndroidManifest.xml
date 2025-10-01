@@ -2,10 +2,7 @@
 <manifest package="com.example.equipohawknetwork"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Recomendado si no lo tienes ya (Firestore/FCM necesitan red) -->
     <uses-permission android:name="android.permission.INTERNET" />
-
-    <!-- Android 13+ requiere permiso de runtime para notificaciones -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
@@ -17,7 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Material3.DayNight.NoActionBar">
 
-        <!-- 🔔 Defaults para FCM: icono y canal por defecto -->
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@mipmap/ic_launcher" />
@@ -25,17 +21,23 @@
             android:name="com.google.firebase.messaging.default_notification_channel_id"
             android:value="default_channel" />
 
-        <!-- Pantalla principal (NO launcher) -->
         <activity
             android:name=".MainActivity"
             android:exported="true" />
 
-        <!-- Compose de eventos -->
         <activity
             android:name=".EventsActivity"
             android:exported="false" />
 
-        <!-- Login como launcher -->
+        <!-- NUEVO -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".routines.RoutinesActivity"
+            android:exported="false" />
+
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -45,7 +47,6 @@
             </intent-filter>
         </activity>
 
-        <!-- 🔔 Servicio de Firebase Cloud Messaging -->
         <service
             android:name=".push.MyFirebaseMessagingService"
             android:exported="false">

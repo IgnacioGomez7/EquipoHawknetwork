@@ -16,6 +16,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
+import com.example.equipohawknetwork.routines.RoutinesActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -44,7 +45,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Error Firestore: ${e.localizedMessage}", Toast.LENGTH_LONG).show()
             }
 
-        // === Botones en Dashboard (ADD-ONLY, sin debug de FCM) ===
+        // === Botones en Dashboard (ADD-ONLY) ===
         val root = findViewById<ViewGroup>(android.R.id.content)
 
         // Cerrar sesión
@@ -77,6 +78,22 @@ class MainActivity : AppCompatActivity() {
                 ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT
             ).apply { topMargin = 96 }
+        )
+
+        // 🔹 NUEVO: Ir a Rutinas (abre la pantalla con lista por día)
+        val btnRoutines = Button(this).apply {
+            text = "Rutinas"
+            setOnClickListener {
+                // <- AQUÍ estaba el fallo: usa la clase importada
+                startActivity(Intent(this@MainActivity, RoutinesActivity::class.java))
+            }
+        }
+        root.addView(
+            btnRoutines,
+            ViewGroup.MarginLayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            ).apply { topMargin = 168 }
         )
         // === END ===
     }
