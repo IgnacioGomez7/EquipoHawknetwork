@@ -4,55 +4,100 @@ package com.example.equipohawknetwork.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.ScrollView;
-import android.widget.Spinner;
+import android.widget.AutoCompleteTextView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.equipohawknetwork.R;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.card.MaterialCardView;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class DialogAddExerciseBinding implements ViewBinding {
   @NonNull
-  private final ScrollView rootView;
+  private final MaterialCardView rootView;
 
   @NonNull
-  public final EditText etName;
+  public final AutoCompleteTextView actvGroup;
 
   @NonNull
-  public final EditText etReps;
+  public final MaterialButton btnCancel;
 
   @NonNull
-  public final EditText etRest;
+  public final MaterialButton btnSave;
 
   @NonNull
-  public final EditText etSets;
+  public final TextInputEditText etName;
 
   @NonNull
-  public final EditText etWeight;
+  public final TextInputEditText etReps;
 
   @NonNull
-  public final Spinner spGroup;
+  public final TextInputEditText etRest;
 
-  private DialogAddExerciseBinding(@NonNull ScrollView rootView, @NonNull EditText etName,
-      @NonNull EditText etReps, @NonNull EditText etRest, @NonNull EditText etSets,
-      @NonNull EditText etWeight, @NonNull Spinner spGroup) {
+  @NonNull
+  public final TextInputEditText etSets;
+
+  @NonNull
+  public final TextInputEditText etWeight;
+
+  @NonNull
+  public final TextInputLayout tilGroup;
+
+  @NonNull
+  public final TextInputLayout tilName;
+
+  @NonNull
+  public final TextInputLayout tilReps;
+
+  @NonNull
+  public final TextInputLayout tilRest;
+
+  @NonNull
+  public final TextInputLayout tilSets;
+
+  @NonNull
+  public final TextInputLayout tilWeight;
+
+  @NonNull
+  public final TextView tvTitle;
+
+  private DialogAddExerciseBinding(@NonNull MaterialCardView rootView,
+      @NonNull AutoCompleteTextView actvGroup, @NonNull MaterialButton btnCancel,
+      @NonNull MaterialButton btnSave, @NonNull TextInputEditText etName,
+      @NonNull TextInputEditText etReps, @NonNull TextInputEditText etRest,
+      @NonNull TextInputEditText etSets, @NonNull TextInputEditText etWeight,
+      @NonNull TextInputLayout tilGroup, @NonNull TextInputLayout tilName,
+      @NonNull TextInputLayout tilReps, @NonNull TextInputLayout tilRest,
+      @NonNull TextInputLayout tilSets, @NonNull TextInputLayout tilWeight,
+      @NonNull TextView tvTitle) {
     this.rootView = rootView;
+    this.actvGroup = actvGroup;
+    this.btnCancel = btnCancel;
+    this.btnSave = btnSave;
     this.etName = etName;
     this.etReps = etReps;
     this.etRest = etRest;
     this.etSets = etSets;
     this.etWeight = etWeight;
-    this.spGroup = spGroup;
+    this.tilGroup = tilGroup;
+    this.tilName = tilName;
+    this.tilReps = tilReps;
+    this.tilRest = tilRest;
+    this.tilSets = tilSets;
+    this.tilWeight = tilWeight;
+    this.tvTitle = tvTitle;
   }
 
   @Override
   @NonNull
-  public ScrollView getRoot() {
+  public MaterialCardView getRoot() {
     return rootView;
   }
 
@@ -77,44 +122,99 @@ public final class DialogAddExerciseBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.actvGroup;
+      AutoCompleteTextView actvGroup = ViewBindings.findChildViewById(rootView, id);
+      if (actvGroup == null) {
+        break missingId;
+      }
+
+      id = R.id.btnCancel;
+      MaterialButton btnCancel = ViewBindings.findChildViewById(rootView, id);
+      if (btnCancel == null) {
+        break missingId;
+      }
+
+      id = R.id.btnSave;
+      MaterialButton btnSave = ViewBindings.findChildViewById(rootView, id);
+      if (btnSave == null) {
+        break missingId;
+      }
+
       id = R.id.etName;
-      EditText etName = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText etName = ViewBindings.findChildViewById(rootView, id);
       if (etName == null) {
         break missingId;
       }
 
       id = R.id.etReps;
-      EditText etReps = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText etReps = ViewBindings.findChildViewById(rootView, id);
       if (etReps == null) {
         break missingId;
       }
 
       id = R.id.etRest;
-      EditText etRest = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText etRest = ViewBindings.findChildViewById(rootView, id);
       if (etRest == null) {
         break missingId;
       }
 
       id = R.id.etSets;
-      EditText etSets = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText etSets = ViewBindings.findChildViewById(rootView, id);
       if (etSets == null) {
         break missingId;
       }
 
       id = R.id.etWeight;
-      EditText etWeight = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText etWeight = ViewBindings.findChildViewById(rootView, id);
       if (etWeight == null) {
         break missingId;
       }
 
-      id = R.id.spGroup;
-      Spinner spGroup = ViewBindings.findChildViewById(rootView, id);
-      if (spGroup == null) {
+      id = R.id.tilGroup;
+      TextInputLayout tilGroup = ViewBindings.findChildViewById(rootView, id);
+      if (tilGroup == null) {
         break missingId;
       }
 
-      return new DialogAddExerciseBinding((ScrollView) rootView, etName, etReps, etRest, etSets,
-          etWeight, spGroup);
+      id = R.id.tilName;
+      TextInputLayout tilName = ViewBindings.findChildViewById(rootView, id);
+      if (tilName == null) {
+        break missingId;
+      }
+
+      id = R.id.tilReps;
+      TextInputLayout tilReps = ViewBindings.findChildViewById(rootView, id);
+      if (tilReps == null) {
+        break missingId;
+      }
+
+      id = R.id.tilRest;
+      TextInputLayout tilRest = ViewBindings.findChildViewById(rootView, id);
+      if (tilRest == null) {
+        break missingId;
+      }
+
+      id = R.id.tilSets;
+      TextInputLayout tilSets = ViewBindings.findChildViewById(rootView, id);
+      if (tilSets == null) {
+        break missingId;
+      }
+
+      id = R.id.tilWeight;
+      TextInputLayout tilWeight = ViewBindings.findChildViewById(rootView, id);
+      if (tilWeight == null) {
+        break missingId;
+      }
+
+      id = R.id.tvTitle;
+      TextView tvTitle = ViewBindings.findChildViewById(rootView, id);
+      if (tvTitle == null) {
+        break missingId;
+      }
+
+      return new DialogAddExerciseBinding((MaterialCardView) rootView, actvGroup, btnCancel,
+          btnSave, etName, etReps, etRest, etSets, etWeight, tilGroup, tilName, tilReps, tilRest,
+          tilSets, tilWeight, tvTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

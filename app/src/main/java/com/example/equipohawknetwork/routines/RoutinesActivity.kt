@@ -68,7 +68,7 @@ class RoutinesActivity : AppCompatActivity() {
                     muscleGroup = group,
                     sets = sets,
                     reps = reps,
-                    weightKg = weight,
+                    weightKg = weight.toDouble(), // 👈 Float -> Double
                     restSec = rest
                 )
             )
@@ -86,7 +86,7 @@ class RoutinesActivity : AppCompatActivity() {
                     muscleGroup = group,
                     sets = sets,
                     reps = reps,
-                    weightKg = weight,
+                    weightKg = weight.toDouble(), // 👈 Float -> Double
                     restSec = rest
                 )
             )

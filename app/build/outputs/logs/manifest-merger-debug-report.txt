@@ -12,6 +12,8 @@ MERGED from [com.google.android.material:material:1.12.0] C:\Users\Willf\.gradle
 MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\Willf\.gradle\caches\8.13\transforms\d2402c414d0a94a438940e7d06ce9bf0\transformed\jetified-appcompat-resources-1.7.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Willf\.gradle\caches\8.13\transforms\6d4416a33730218e9470655d185db8a1\transformed\constraintlayout-2.0.1\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\Willf\.gradle\caches\8.13\transforms\efa6c149339b1eba54a2b7ae197a6a48\transformed\appcompat-1.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] C:\Users\Willf\.gradle\caches\8.13\transforms\66f46c9b8735f9c6fbe0e8c9ca74b22b\transformed\jetified-viewpager2-1.1.0-beta02\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] C:\Users\Willf\.gradle\caches\8.13\transforms\8278012b4dca61bb2918bec7398fd6f8\transformed\recyclerview-1.3.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.hilt:hilt-navigation-compose:1.2.0] C:\Users\Willf\.gradle\caches\8.13\transforms\77765b9dec06c19eb889f0e1a2331c96\transformed\jetified-hilt-navigation-compose-1.2.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.hilt:hilt-navigation:1.2.0] C:\Users\Willf\.gradle\caches\8.13\transforms\2d705f3e20a5ddbc3217aef163cdb7fb\transformed\jetified-hilt-navigation-1.2.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-common:2.7.7] C:\Users\Willf\.gradle\caches\8.13\transforms\3bdaa2ad9b1e6480c4a9a226c8d6e2f6\transformed\navigation-common-2.7.7\AndroidManifest.xml:17:1-22:12
@@ -25,7 +27,6 @@ MERGED from [com.google.firebase:firebase-auth:24.0.1] C:\Users\Willf\.gradle\ca
 MERGED from [androidx.credentials:credentials:1.2.0-rc01] C:\Users\Willf\.gradle\caches\8.13\transforms\6aa6c1c8eba5507ffb3fd4864be120d2\transformed\jetified-credentials-1.2.0-rc01\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Willf\.gradle\caches\8.13\transforms\64d7495d7846a8870a5e4dfde50ef776\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:17:1-44:12
 MERGED from [com.google.android.gms:play-services-auth:21.2.0] C:\Users\Willf\.gradle\caches\8.13\transforms\581f2e93f01dd3f74a61ea37faa5616b\transformed\jetified-play-services-auth-21.2.0\AndroidManifest.xml:17:1-40:12
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Willf\.gradle\caches\8.13\transforms\2abc1e725e0734167a24f11a8258d1a4\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-firestore:26.0.0] C:\Users\Willf\.gradle\caches\8.13\transforms\a675da98ae19bb38d6ca3632b5cb2279\transformed\jetified-firebase-firestore-26.0.0\AndroidManifest.xml:2:1-26:12
 MERGED from [com.google.firebase:firebase-messaging:25.0.0] C:\Users\Willf\.gradle\caches\8.13\transforms\8b50719ea40c812eeec35a9621a1dbbe\transformed\jetified-firebase-messaging-25.0.0\AndroidManifest.xml:17:1-66:12
 MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] C:\Users\Willf\.gradle\caches\8.13\transforms\33560b4c948c79c1477c89db94aac096\transformed\jetified-play-services-auth-api-phone-18.0.2\AndroidManifest.xml:2:1-7:12
@@ -111,7 +112,6 @@ MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Willf\
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Willf\.gradle\caches\8.13\transforms\22ba83476bd9148c8b77091fc2b2a81f\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Willf\.gradle\caches\8.13\transforms\46c4975622aad681745e1455e55a4c3c\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.browser:browser:1.4.0] C:\Users\Willf\.gradle\caches\8.13\transforms\9bf144878bb544d907880877a0f827cb\transformed\browser-1.4.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Willf\.gradle\caches\8.13\transforms\7c19dbffebc4d47d9ebf8d3b7fae5f70\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Willf\.gradle\caches\8.13\transforms\a5932dc3f85d7f9f9b7a23781b2f62cb\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\Willf\.gradle\caches\8.13\transforms\4e27cae87d22cf8a8aef696eefaf8b6e\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\Willf\.gradle\caches\8.13\transforms\5c66531d403ad5eaf106dfd4f6a5228b\transformed\jetified-autofill-1.0.0\AndroidManifest.xml:17:1-24:12
@@ -125,9 +125,9 @@ MERGED from [com.google.android.datatransport:transport-backend-cct:3.3.0] C:\Us
 MERGED from [com.google.firebase:firebase-encoders-json:18.0.1] C:\Users\Willf\.gradle\caches\8.13\transforms\b2c5f3c4e514e6b6c7bea556154c5f3d\transformed\jetified-firebase-encoders-json-18.0.1\AndroidManifest.xml:15:1-22:12
 MERGED from [com.google.android.libraries.identity.googleid:googleid:1.1.0] C:\Users\Willf\.gradle\caches\8.13\transforms\720fd821d90b34d59dc4fba6bdc8d7b8\transformed\jetified-googleid-1.1.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Willf\.gradle\caches\8.13\transforms\33e6dd70c889fd56a3be9c66237187be\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Willf\.gradle\caches\8.13\transforms\e5efebdaef30c64eaa4400cbe767f60e\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Willf\.gradle\caches\8.13\transforms\46974080d447713ef48834c3f056e903\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Willf\.gradle\caches\8.13\transforms\0f5a4e423cc179672b46c3750f7e24ef\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:17:1-55:12
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Willf\.gradle\caches\8.13\transforms\e5efebdaef30c64eaa4400cbe767f60e\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Willf\.gradle\caches\8.13\transforms\a8c13daf6ae68d122b6bf866a4c29098\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-components:19.0.0] C:\Users\Willf\.gradle\caches\8.13\transforms\337bfc2b20e38e09391f81a788e28573\transformed\jetified-firebase-components-19.0.0\AndroidManifest.xml:15:1-20:12
 MERGED from [com.google.android.datatransport:transport-runtime:3.3.0] C:\Users\Willf\.gradle\caches\8.13\transforms\9877b91b49d82f0ca0ca403783a81ef3\transformed\jetified-transport-runtime-3.3.0\AndroidManifest.xml:15:1-39:12
@@ -369,6 +369,10 @@ MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Willf\.g
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Willf\.gradle\caches\8.13\transforms\6d4416a33730218e9470655d185db8a1\transformed\constraintlayout-2.0.1\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\Willf\.gradle\caches\8.13\transforms\efa6c149339b1eba54a2b7ae197a6a48\transformed\appcompat-1.7.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\Willf\.gradle\caches\8.13\transforms\efa6c149339b1eba54a2b7ae197a6a48\transformed\appcompat-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] C:\Users\Willf\.gradle\caches\8.13\transforms\66f46c9b8735f9c6fbe0e8c9ca74b22b\transformed\jetified-viewpager2-1.1.0-beta02\AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] C:\Users\Willf\.gradle\caches\8.13\transforms\66f46c9b8735f9c6fbe0e8c9ca74b22b\transformed\jetified-viewpager2-1.1.0-beta02\AndroidManifest.xml:5:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] C:\Users\Willf\.gradle\caches\8.13\transforms\8278012b4dca61bb2918bec7398fd6f8\transformed\recyclerview-1.3.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] C:\Users\Willf\.gradle\caches\8.13\transforms\8278012b4dca61bb2918bec7398fd6f8\transformed\recyclerview-1.3.2\AndroidManifest.xml:20:5-44
 MERGED from [androidx.hilt:hilt-navigation-compose:1.2.0] C:\Users\Willf\.gradle\caches\8.13\transforms\77765b9dec06c19eb889f0e1a2331c96\transformed\jetified-hilt-navigation-compose-1.2.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.hilt:hilt-navigation-compose:1.2.0] C:\Users\Willf\.gradle\caches\8.13\transforms\77765b9dec06c19eb889f0e1a2331c96\transformed\jetified-hilt-navigation-compose-1.2.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.hilt:hilt-navigation:1.2.0] C:\Users\Willf\.gradle\caches\8.13\transforms\2d705f3e20a5ddbc3217aef163cdb7fb\transformed\jetified-hilt-navigation-1.2.0\AndroidManifest.xml:5:5-44
@@ -395,8 +399,6 @@ MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\
 MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Willf\.gradle\caches\8.13\transforms\64d7495d7846a8870a5e4dfde50ef776\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:21:5-44
 MERGED from [com.google.android.gms:play-services-auth:21.2.0] C:\Users\Willf\.gradle\caches\8.13\transforms\581f2e93f01dd3f74a61ea37faa5616b\transformed\jetified-play-services-auth-21.2.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth:21.2.0] C:\Users\Willf\.gradle\caches\8.13\transforms\581f2e93f01dd3f74a61ea37faa5616b\transformed\jetified-play-services-auth-21.2.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Willf\.gradle\caches\8.13\transforms\2abc1e725e0734167a24f11a8258d1a4\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Willf\.gradle\caches\8.13\transforms\2abc1e725e0734167a24f11a8258d1a4\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-firestore:26.0.0] C:\Users\Willf\.gradle\caches\8.13\transforms\a675da98ae19bb38d6ca3632b5cb2279\transformed\jetified-firebase-firestore-26.0.0\AndroidManifest.xml:6:5-44
 MERGED from [com.google.firebase:firebase-firestore:26.0.0] C:\Users\Willf\.gradle\caches\8.13\transforms\a675da98ae19bb38d6ca3632b5cb2279\transformed\jetified-firebase-firestore-26.0.0\AndroidManifest.xml:6:5-44
 MERGED from [com.google.firebase:firebase-messaging:25.0.0] C:\Users\Willf\.gradle\caches\8.13\transforms\8b50719ea40c812eeec35a9621a1dbbe\transformed\jetified-firebase-messaging-25.0.0\AndroidManifest.xml:20:5-44
@@ -567,8 +569,6 @@ MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Willf\.gradl
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Willf\.gradle\caches\8.13\transforms\46c4975622aad681745e1455e55a4c3c\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.browser:browser:1.4.0] C:\Users\Willf\.gradle\caches\8.13\transforms\9bf144878bb544d907880877a0f827cb\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.browser:browser:1.4.0] C:\Users\Willf\.gradle\caches\8.13\transforms\9bf144878bb544d907880877a0f827cb\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Willf\.gradle\caches\8.13\transforms\7c19dbffebc4d47d9ebf8d3b7fae5f70\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Willf\.gradle\caches\8.13\transforms\7c19dbffebc4d47d9ebf8d3b7fae5f70\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Willf\.gradle\caches\8.13\transforms\a5932dc3f85d7f9f9b7a23781b2f62cb\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Willf\.gradle\caches\8.13\transforms\a5932dc3f85d7f9f9b7a23781b2f62cb\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\Willf\.gradle\caches\8.13\transforms\4e27cae87d22cf8a8aef696eefaf8b6e\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
@@ -595,12 +595,12 @@ MERGED from [com.google.android.libraries.identity.googleid:googleid:1.1.0] C:\U
 MERGED from [com.google.android.libraries.identity.googleid:googleid:1.1.0] C:\Users\Willf\.gradle\caches\8.13\transforms\720fd821d90b34d59dc4fba6bdc8d7b8\transformed\jetified-googleid-1.1.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Willf\.gradle\caches\8.13\transforms\33e6dd70c889fd56a3be9c66237187be\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Willf\.gradle\caches\8.13\transforms\33e6dd70c889fd56a3be9c66237187be\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Willf\.gradle\caches\8.13\transforms\e5efebdaef30c64eaa4400cbe767f60e\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Willf\.gradle\caches\8.13\transforms\e5efebdaef30c64eaa4400cbe767f60e\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Willf\.gradle\caches\8.13\transforms\46974080d447713ef48834c3f056e903\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Willf\.gradle\caches\8.13\transforms\46974080d447713ef48834c3f056e903\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Willf\.gradle\caches\8.13\transforms\0f5a4e423cc179672b46c3750f7e24ef\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:21:5-44
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Willf\.gradle\caches\8.13\transforms\0f5a4e423cc179672b46c3750f7e24ef\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:21:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Willf\.gradle\caches\8.13\transforms\e5efebdaef30c64eaa4400cbe767f60e\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Willf\.gradle\caches\8.13\transforms\e5efebdaef30c64eaa4400cbe767f60e\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Willf\.gradle\caches\8.13\transforms\a8c13daf6ae68d122b6bf866a4c29098\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Willf\.gradle\caches\8.13\transforms\a8c13daf6ae68d122b6bf866a4c29098\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-components:19.0.0] C:\Users\Willf\.gradle\caches\8.13\transforms\337bfc2b20e38e09391f81a788e28573\transformed\jetified-firebase-components-19.0.0\AndroidManifest.xml:18:5-44

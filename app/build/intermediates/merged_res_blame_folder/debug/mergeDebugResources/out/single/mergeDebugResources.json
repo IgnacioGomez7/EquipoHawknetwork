@@ -4,24 +4,8 @@
         "source": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-main-8:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.example.equipohawknetwork.app-debug-6:/layout_item_exercise.xml.flat",
-        "source": "com.example.equipohawknetwork.app-main-8:/layout/item_exercise.xml"
-    },
-    {
-        "merged": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-debug-6:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-main-8:\\mipmap-anydpi-v26\\ic_launcher.xml"
-    },
-    {
         "merged": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-debug-6:\\layout_dialog_exercise.xml.flat",
         "source": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-main-8:\\layout\\dialog_exercise.xml"
-    },
-    {
-        "merged": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-debug-6:\\layout_item_exercise.xml.flat",
-        "source": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-main-8:\\layout\\item_exercise.xml"
-    },
-    {
-        "merged": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-debug-6:\\layout_activity_routines.xml.flat",
-        "source": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-main-8:\\layout\\activity_routines.xml"
     },
     {
         "merged": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-debug-6:\\layout_activity_register.xml.flat",
@@ -36,8 +20,52 @@
         "source": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-main-8:\\layout\\dialog_add_exercise.xml"
     },
     {
+        "merged": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-debug-6:\\drawable_bg_header.xml.flat",
+        "source": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-main-8:\\drawable\\bg_header.xml"
+    },
+    {
         "merged": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-debug-6:\\layout_activity_login.xml.flat",
         "source": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-main-8:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-debug-6:\\drawable_ic_done_24.xml.flat",
+        "source": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-main-8:\\drawable\\ic_done_24.xml"
+    },
+    {
+        "merged": "com.example.equipohawknetwork.app-debug-6:/layout_item_exercise.xml.flat",
+        "source": "com.example.equipohawknetwork.app-main-8:/layout/item_exercise.xml"
+    },
+    {
+        "merged": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-debug-6:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-main-8:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.equipohawknetwork.app-debug-6:/layout_dialog_add_exercise.xml.flat",
+        "source": "com.example.equipohawknetwork.app-main-8:/layout/dialog_add_exercise.xml"
+    },
+    {
+        "merged": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-debug-6:\\layout_item_exercise.xml.flat",
+        "source": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-main-8:\\layout\\item_exercise.xml"
+    },
+    {
+        "merged": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-debug-6:\\layout_activity_routines.xml.flat",
+        "source": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-main-8:\\layout\\activity_routines.xml"
+    },
+    {
+        "merged": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-debug-6:\\drawable_ic_add_24.xml.flat",
+        "source": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-main-8:\\drawable\\ic_add_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-debug-6:\\drawable_bg_dialog_top.xml.flat",
+        "source": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-main-8:\\drawable\\bg_dialog_top.xml"
+    },
+    {
+        "merged": "com.example.equipohawknetwork.app-debug-6:/layout_activity_routines.xml.flat",
+        "source": "com.example.equipohawknetwork.app-main-8:/layout/activity_routines.xml"
+    },
+    {
+        "merged": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-debug-6:\\drawable_ic_edit_24.xml.flat",
+        "source": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-main-8:\\drawable\\ic_edit_24.xml"
     },
     {
         "merged": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-debug-6:\\drawable_ic_launcher_foreground.xml.flat",

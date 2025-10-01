@@ -6,12 +6,12 @@ import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
-import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.google.android.material.appbar.MaterialToolbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.google.firebase.firestore.FieldValue
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Crashlytics: etiqueta uid si hay sesión (se mantiene)
+        // Crashlytics: etiqueta uid si hay sesión
         FirebaseAuth.getInstance().currentUser?.uid?.let {
             FirebaseCrashlytics.getInstance().setUserId(it)
         }
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         // Permiso notificaciones (Android 13+)
         requestPostNotificationsIfNeeded()
 
-        // Prueba mínima Firestore (se mantiene)
+        // Prueba mínima Firestore
         val db = FirebaseFirestore.getInstance()
         val data = mapOf("mensaje" to "hola", "timestamp" to FieldValue.serverTimestamp())
         db.collection("pruebas").add(data)
@@ -45,57 +45,24 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Error Firestore: ${e.localizedMessage}", Toast.LENGTH_LONG).show()
             }
 
-        // === Botones en Dashboard (ADD-ONLY) ===
-        val root = findViewById<ViewGroup>(android.R.id.content)
+        // Toolbar
+        val toolbar = findViewById<MaterialToolbar>(R.id.topAppBar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.title = "Hawk Network"
 
-        // Cerrar sesión
-        val btnLogout = Button(this).apply {
-            text = "Cerrar sesión"
-            setOnClickListener {
-                FirebaseAuth.getInstance().signOut()
-                startActivity(Intent(this@MainActivity, LoginActivity::class.java))
-                finish()
-            }
-        }
-        root.addView(
-            btnLogout,
-            ViewGroup.MarginLayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT
-            ).apply { topMargin = 24 }
-        )
+        // Botones
+        val btnRoutines = findViewById<Button>(R.id.btnRoutines)
+        val btnLogout = findViewById<Button>(R.id.btnLogout)
 
-        // Ir a Eventos (Compose)
-        val btnEvents = Button(this).apply {
-            text = "Eventos (Compose)"
-            setOnClickListener {
-                startActivity(Intent(this@MainActivity, EventsActivity::class.java))
-            }
+        btnRoutines.setOnClickListener {
+            startActivity(Intent(this@MainActivity, RoutinesActivity::class.java))
         }
-        root.addView(
-            btnEvents,
-            ViewGroup.MarginLayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT
-            ).apply { topMargin = 96 }
-        )
 
-        // 🔹 NUEVO: Ir a Rutinas (abre la pantalla con lista por día)
-        val btnRoutines = Button(this).apply {
-            text = "Rutinas"
-            setOnClickListener {
-                // <- AQUÍ estaba el fallo: usa la clase importada
-                startActivity(Intent(this@MainActivity, RoutinesActivity::class.java))
-            }
+        btnLogout.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            startActivity(Intent(this@MainActivity, LoginActivity::class.java))
+            finish()
         }
-        root.addView(
-            btnRoutines,
-            ViewGroup.MarginLayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT
-            ).apply { topMargin = 168 }
-        )
-        // === END ===
     }
 
     override fun onStart() {

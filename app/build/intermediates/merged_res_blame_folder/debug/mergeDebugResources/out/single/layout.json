@@ -12,6 +12,10 @@
         "source": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-main-8:\\layout\\item_exercise.xml"
     },
     {
+        "merged": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-mergeDebugResources-5:\\layout\\activity_routines.xml",
+        "source": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-main-8:\\layout\\activity_routines.xml"
+    },
+    {
         "merged": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-mergeDebugResources-5:\\layout\\activity_register.xml",
         "source": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-main-8:\\layout\\activity_register.xml"
     },
@@ -20,8 +24,8 @@
         "source": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-main-8:\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-mergeDebugResources-5:\\layout\\activity_routines.xml",
-        "source": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-main-8:\\layout\\activity_routines.xml"
+        "merged": "com.example.equipohawknetwork.app-mergeDebugResources-5:/layout/activity_routines.xml",
+        "source": "com.example.equipohawknetwork.app-main-8:/layout/activity_routines.xml"
     },
     {
         "merged": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-mergeDebugResources-5:\\layout\\dialog_add_exercise.xml",
@@ -30,5 +34,9 @@
     {
         "merged": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-mergeDebugResources-5:\\layout\\activity_login.xml",
         "source": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-main-8:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "com.example.equipohawknetwork.app-mergeDebugResources-5:/layout/dialog_add_exercise.xml",
+        "source": "com.example.equipohawknetwork.app-main-8:/layout/dialog_add_exercise.xml"
     }
 ]

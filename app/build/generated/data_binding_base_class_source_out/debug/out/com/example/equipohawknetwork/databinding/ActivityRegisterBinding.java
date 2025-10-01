@@ -4,8 +4,7 @@ package com.example.equipohawknetwork.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -13,6 +12,9 @@ import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.equipohawknetwork.R;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -22,37 +24,47 @@ public final class ActivityRegisterBinding implements ViewBinding {
   private final ScrollView rootView;
 
   @NonNull
-  public final Button btnRegistrar;
+  public final MaterialButton btnRegister;
 
   @NonNull
-  public final EditText etConfirm;
+  public final TextInputEditText etConfirm;
 
   @NonNull
-  public final EditText etEmail;
+  public final TextInputEditText etEmail;
 
   @NonNull
-  public final EditText etNombre;
+  public final TextInputEditText etPass;
 
   @NonNull
-  public final EditText etPass;
+  public final ProgressBar progress;
 
   @NonNull
-  public final TextView tvEstado;
+  public final TextInputLayout tilConfirm;
 
   @NonNull
-  public final TextView tvIrLogin;
+  public final TextInputLayout tilEmail;
 
-  private ActivityRegisterBinding(@NonNull ScrollView rootView, @NonNull Button btnRegistrar,
-      @NonNull EditText etConfirm, @NonNull EditText etEmail, @NonNull EditText etNombre,
-      @NonNull EditText etPass, @NonNull TextView tvEstado, @NonNull TextView tvIrLogin) {
+  @NonNull
+  public final TextInputLayout tilPass;
+
+  @NonNull
+  public final TextView tvGoLogin;
+
+  private ActivityRegisterBinding(@NonNull ScrollView rootView, @NonNull MaterialButton btnRegister,
+      @NonNull TextInputEditText etConfirm, @NonNull TextInputEditText etEmail,
+      @NonNull TextInputEditText etPass, @NonNull ProgressBar progress,
+      @NonNull TextInputLayout tilConfirm, @NonNull TextInputLayout tilEmail,
+      @NonNull TextInputLayout tilPass, @NonNull TextView tvGoLogin) {
     this.rootView = rootView;
-    this.btnRegistrar = btnRegistrar;
+    this.btnRegister = btnRegister;
     this.etConfirm = etConfirm;
     this.etEmail = etEmail;
-    this.etNombre = etNombre;
     this.etPass = etPass;
-    this.tvEstado = tvEstado;
-    this.tvIrLogin = tvIrLogin;
+    this.progress = progress;
+    this.tilConfirm = tilConfirm;
+    this.tilEmail = tilEmail;
+    this.tilPass = tilPass;
+    this.tvGoLogin = tvGoLogin;
   }
 
   @Override
@@ -82,50 +94,62 @@ public final class ActivityRegisterBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btnRegistrar;
-      Button btnRegistrar = ViewBindings.findChildViewById(rootView, id);
-      if (btnRegistrar == null) {
+      id = R.id.btnRegister;
+      MaterialButton btnRegister = ViewBindings.findChildViewById(rootView, id);
+      if (btnRegister == null) {
         break missingId;
       }
 
       id = R.id.etConfirm;
-      EditText etConfirm = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText etConfirm = ViewBindings.findChildViewById(rootView, id);
       if (etConfirm == null) {
         break missingId;
       }
 
       id = R.id.etEmail;
-      EditText etEmail = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText etEmail = ViewBindings.findChildViewById(rootView, id);
       if (etEmail == null) {
         break missingId;
       }
 
-      id = R.id.etNombre;
-      EditText etNombre = ViewBindings.findChildViewById(rootView, id);
-      if (etNombre == null) {
-        break missingId;
-      }
-
       id = R.id.etPass;
-      EditText etPass = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText etPass = ViewBindings.findChildViewById(rootView, id);
       if (etPass == null) {
         break missingId;
       }
 
-      id = R.id.tvEstado;
-      TextView tvEstado = ViewBindings.findChildViewById(rootView, id);
-      if (tvEstado == null) {
+      id = R.id.progress;
+      ProgressBar progress = ViewBindings.findChildViewById(rootView, id);
+      if (progress == null) {
         break missingId;
       }
 
-      id = R.id.tvIrLogin;
-      TextView tvIrLogin = ViewBindings.findChildViewById(rootView, id);
-      if (tvIrLogin == null) {
+      id = R.id.tilConfirm;
+      TextInputLayout tilConfirm = ViewBindings.findChildViewById(rootView, id);
+      if (tilConfirm == null) {
         break missingId;
       }
 
-      return new ActivityRegisterBinding((ScrollView) rootView, btnRegistrar, etConfirm, etEmail,
-          etNombre, etPass, tvEstado, tvIrLogin);
+      id = R.id.tilEmail;
+      TextInputLayout tilEmail = ViewBindings.findChildViewById(rootView, id);
+      if (tilEmail == null) {
+        break missingId;
+      }
+
+      id = R.id.tilPass;
+      TextInputLayout tilPass = ViewBindings.findChildViewById(rootView, id);
+      if (tilPass == null) {
+        break missingId;
+      }
+
+      id = R.id.tvGoLogin;
+      TextView tvGoLogin = ViewBindings.findChildViewById(rootView, id);
+      if (tvGoLogin == null) {
+        break missingId;
+      }
+
+      return new ActivityRegisterBinding((ScrollView) rootView, btnRegister, etConfirm, etEmail,
+          etPass, progress, tilConfirm, tilEmail, tilPass, tvGoLogin);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

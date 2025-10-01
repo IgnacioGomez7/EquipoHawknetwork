@@ -5,10 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.equipohawknetwork.R;
@@ -18,7 +18,7 @@ import java.lang.String;
 
 public final class ItemExerciseBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final CardView rootView;
 
   @NonNull
   public final Button btnComplete;
@@ -27,28 +27,23 @@ public final class ItemExerciseBinding implements ViewBinding {
   public final Button btnEdit;
 
   @NonNull
-  public final LinearLayout root;
-
-  @NonNull
   public final TextView tvSubtitle;
 
   @NonNull
   public final TextView tvTitle;
 
-  private ItemExerciseBinding(@NonNull LinearLayout rootView, @NonNull Button btnComplete,
-      @NonNull Button btnEdit, @NonNull LinearLayout root, @NonNull TextView tvSubtitle,
-      @NonNull TextView tvTitle) {
+  private ItemExerciseBinding(@NonNull CardView rootView, @NonNull Button btnComplete,
+      @NonNull Button btnEdit, @NonNull TextView tvSubtitle, @NonNull TextView tvTitle) {
     this.rootView = rootView;
     this.btnComplete = btnComplete;
     this.btnEdit = btnEdit;
-    this.root = root;
     this.tvSubtitle = tvSubtitle;
     this.tvTitle = tvTitle;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public CardView getRoot() {
     return rootView;
   }
 
@@ -85,8 +80,6 @@ public final class ItemExerciseBinding implements ViewBinding {
         break missingId;
       }
 
-      LinearLayout root = (LinearLayout) rootView;
-
       id = R.id.tvSubtitle;
       TextView tvSubtitle = ViewBindings.findChildViewById(rootView, id);
       if (tvSubtitle == null) {
@@ -99,8 +92,8 @@ public final class ItemExerciseBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ItemExerciseBinding((LinearLayout) rootView, btnComplete, btnEdit, root,
-          tvSubtitle, tvTitle);
+      return new ItemExerciseBinding((CardView) rootView, btnComplete, btnEdit, tvSubtitle,
+          tvTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

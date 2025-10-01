@@ -3,85 +3,93 @@ package com.example.equipohawknetwork
 import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
+import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.equipohawknetwork.databinding.ActivityRegisterBinding
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FieldValue
-import com.google.firebase.firestore.FirebaseFirestore
-import com.example.equipohawknetwork.AppAnalytics
 
 class RegisterActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityRegisterBinding
     private val auth by lazy { FirebaseAuth.getInstance() }
-    private val db by lazy { FirebaseFirestore.getInstance() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityRegisterBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_register)
 
-        binding.btnRegistrar.setOnClickListener { doRegister() }
-        binding.tvIrLogin.setOnClickListener {
+        val tilEmail = findViewById<TextInputLayout>(R.id.tilEmail)
+        val etEmail = findViewById<TextInputEditText>(R.id.etEmail)
+        val tilPass = findViewById<TextInputLayout>(R.id.tilPass)
+        val etPass = findViewById<TextInputEditText>(R.id.etPass)
+        val tilConfirm = findViewById<TextInputLayout>(R.id.tilConfirm)
+        val etConfirm = findViewById<TextInputEditText>(R.id.etConfirm)
+        val progress = findViewById<View>(R.id.progress)
+        val btnRegister = findViewById<View>(R.id.btnRegister)
+        val tvGoLogin = findViewById<TextView>(R.id.tvGoLogin)
+
+        // Resalta "Inicio de sesión"
+        tvGoLogin.highlightWord("Inicio de sesión")
+
+        tvGoLogin.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
-    }
 
-    private fun doRegister() {
-        val name  = binding.etNombre.text?.toString()?.trim().orEmpty()
-        val email = binding.etEmail.text?.toString()?.trim().orEmpty()
-        val pass  = binding.etPass.text?.toString()?.trim().orEmpty()
-        val pass2 = binding.etConfirm.text?.toString()?.trim().orEmpty()
+        btnRegister.setOnClickListener {
+            tilEmail.error = null
+            tilPass.error = null
+            tilConfirm.error = null
 
-        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) { toast("Correo inválido"); return }
-        if (pass.length < 6) { toast("La contraseña debe tener al menos 6 caracteres"); return }
-        if (pass != pass2) { toast("Las contraseñas no coinciden"); return }
+            val email = etEmail.text?.toString()?.trim().orEmpty()
+            val pass = etPass.text?.toString()?.trim().orEmpty()
+            val confirm = etConfirm.text?.toString()?.trim().orEmpty()
 
-        binding.btnRegistrar.isEnabled = false
-        binding.tvEstado.text = "Creando cuenta..."
+            var ok = true
+            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                tilEmail.error = "Correo inválido"; ok = false
+            }
+            if (pass.length < 6) {
+                tilPass.error = "Mínimo 6 caracteres"; ok = false
+            }
+            if (confirm != pass) {
+                tilConfirm.error = "Las contraseñas no coinciden"; ok = false
+            }
+            if (!ok) return@setOnClickListener
 
-        auth.createUserWithEmailAndPassword(email, pass)
-            .addOnSuccessListener { res ->
-                val user = res.user ?: run {
-                    fail("No se pudo crear el usuario"); binding.btnRegistrar.isEnabled = true; return@addOnSuccessListener
+            setLoading(true, progress, btnRegister)
+            auth.createUserWithEmailAndPassword(email, pass)
+                .addOnCompleteListener { setLoading(false, progress, btnRegister) }
+                .addOnSuccessListener {
+                    auth.currentUser?.sendEmailVerification()
+                    Toast.makeText(this, "¡Cuenta creada! Te enviamos un correo de verificación.", Toast.LENGTH_LONG).show()
+                    startActivity(Intent(this, LoginActivity::class.java))
+                    finish()
                 }
-
-                // 🔹 Analytics: registro exitoso (Auth)
-                AppAnalytics.signUp(this)
-
-                val uid = user.uid
-                db.collection("users").document(uid)
-                    .set(
-                        mapOf(
-                            "email" to email,
-                            "displayName" to name,
-                            "createdAt" to FieldValue.serverTimestamp(),
-                            "weeklyTargets" to mapOf("sets" to 12, "volumeKg" to 10000, "days" to 4)
-                        )
-                    )
-                    .addOnSuccessListener {
-                        user.sendEmailVerification()
-                            .addOnSuccessListener {
-                                // 🔹 Analytics: correo de verificación enviado
-                                AppAnalytics.verificationSent(this)
-
-                                binding.tvEstado.text = "Cuenta creada. Te enviamos un correo de verificación."
-                                toast("Verifica tu correo y luego inicia sesión")
-                                FirebaseAuth.getInstance().signOut()
-                            }
-                            .addOnFailureListener { e -> fail(e.localizedMessage ?: "No se pudo enviar verificación") }
-                    }
-                    .addOnFailureListener { e -> fail(e.localizedMessage ?: "No se pudo guardar el usuario") }
-                    .addOnCompleteListener { binding.btnRegistrar.isEnabled = true }
-            }
-            .addOnFailureListener { e ->
-                fail(e.localizedMessage ?: "Error al registrar")
-                binding.btnRegistrar.isEnabled = true
-            }
+                .addOnFailureListener { e ->
+                    Toast.makeText(this, "No se pudo registrar: ${e.localizedMessage}", Toast.LENGTH_LONG).show()
+                }
+        }
     }
 
-    private fun fail(msg: String) { binding.tvEstado.text = msg; toast(msg) }
-    private fun toast(msg: String) = Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
+    private fun setLoading(loading: Boolean, progress: View, btn: View) {
+        progress.visibility = if (loading) View.VISIBLE else View.GONE
+        btn.isEnabled = !loading
+    }
+
+    // Extensión local para resaltar una palabra en un TextView (color primario + negrita)
+    private fun TextView.highlightWord(word: String) {
+        val src = text?.toString() ?: return
+        val start = src.indexOf(word, ignoreCase = true)
+        if (start < 0) return
+        val end = start + word.length
+        val span = android.text.SpannableString(src)
+        val color = com.google.android.material.color.MaterialColors.getColor(
+            this, com.google.android.material.R.attr.colorPrimary, 0
+        )
+        span.setSpan(android.text.style.StyleSpan(android.graphics.Typeface.BOLD), start, end, android.text.Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        span.setSpan(android.text.style.ForegroundColorSpan(color), start, end, android.text.Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        text = span
+    }
 }
