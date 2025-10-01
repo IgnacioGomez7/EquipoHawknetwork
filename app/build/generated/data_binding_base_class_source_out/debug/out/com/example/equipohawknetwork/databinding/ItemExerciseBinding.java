@@ -27,16 +27,21 @@ public final class ItemExerciseBinding implements ViewBinding {
   public final Button btnEdit;
 
   @NonNull
+  public final LinearLayout root;
+
+  @NonNull
   public final TextView tvSubtitle;
 
   @NonNull
   public final TextView tvTitle;
 
   private ItemExerciseBinding(@NonNull LinearLayout rootView, @NonNull Button btnComplete,
-      @NonNull Button btnEdit, @NonNull TextView tvSubtitle, @NonNull TextView tvTitle) {
+      @NonNull Button btnEdit, @NonNull LinearLayout root, @NonNull TextView tvSubtitle,
+      @NonNull TextView tvTitle) {
     this.rootView = rootView;
     this.btnComplete = btnComplete;
     this.btnEdit = btnEdit;
+    this.root = root;
     this.tvSubtitle = tvSubtitle;
     this.tvTitle = tvTitle;
   }
@@ -80,6 +85,8 @@ public final class ItemExerciseBinding implements ViewBinding {
         break missingId;
       }
 
+      LinearLayout root = (LinearLayout) rootView;
+
       id = R.id.tvSubtitle;
       TextView tvSubtitle = ViewBindings.findChildViewById(rootView, id);
       if (tvSubtitle == null) {
@@ -92,8 +99,8 @@ public final class ItemExerciseBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ItemExerciseBinding((LinearLayout) rootView, btnComplete, btnEdit, tvSubtitle,
-          tvTitle);
+      return new ItemExerciseBinding((LinearLayout) rootView, btnComplete, btnEdit, root,
+          tvSubtitle, tvTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

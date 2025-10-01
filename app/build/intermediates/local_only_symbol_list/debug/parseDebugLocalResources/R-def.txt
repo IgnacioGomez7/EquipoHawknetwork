@@ -12,6 +12,7 @@ id btnReenviar
 id btnRegistrar
 id etConfirm
 id etEmail
+id etGroup
 id etName
 id etNombre
 id etPass
@@ -20,7 +21,8 @@ id etRest
 id etSets
 id etWeight
 id loginRoot
-id routinesRoot
+id root
+id rootRoutines
 id rvExercises
 id spGroup
 id tvDate
@@ -36,6 +38,7 @@ layout activity_main
 layout activity_register
 layout activity_routines
 layout dialog_add_exercise
+layout dialog_exercise
 layout item_exercise
 mipmap ic_launcher
 mipmap ic_launcher_round

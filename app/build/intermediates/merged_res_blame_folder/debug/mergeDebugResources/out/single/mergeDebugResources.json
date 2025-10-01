@@ -12,8 +12,16 @@
         "source": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-main-8:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "com.example.equipohawknetwork.app-debug-6:/layout_dialog_add_exercise.xml.flat",
-        "source": "com.example.equipohawknetwork.app-main-8:/layout/dialog_add_exercise.xml"
+        "merged": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-debug-6:\\layout_dialog_exercise.xml.flat",
+        "source": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-main-8:\\layout\\dialog_exercise.xml"
+    },
+    {
+        "merged": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-debug-6:\\layout_item_exercise.xml.flat",
+        "source": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-main-8:\\layout\\item_exercise.xml"
+    },
+    {
+        "merged": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-debug-6:\\layout_activity_routines.xml.flat",
+        "source": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-main-8:\\layout\\activity_routines.xml"
     },
     {
         "merged": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-debug-6:\\layout_activity_register.xml.flat",
@@ -24,8 +32,8 @@
         "source": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-main-8:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.example.equipohawknetwork.app-debug-6:/layout_activity_routines.xml.flat",
-        "source": "com.example.equipohawknetwork.app-main-8:/layout/activity_routines.xml"
+        "merged": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-debug-6:\\layout_dialog_add_exercise.xml.flat",
+        "source": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-main-8:\\layout\\dialog_add_exercise.xml"
     },
     {
         "merged": "C:\\Users\\Willf\\.gradle\\daemon\\8.13\\com.example.equipohawknetwork.app-debug-6:\\layout_activity_login.xml.flat",

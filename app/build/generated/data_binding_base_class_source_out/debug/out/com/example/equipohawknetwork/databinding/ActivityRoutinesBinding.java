@@ -28,7 +28,7 @@ public final class ActivityRoutinesBinding implements ViewBinding {
   public final Button btnPickDate;
 
   @NonNull
-  public final LinearLayout routinesRoot;
+  public final LinearLayout rootRoutines;
 
   @NonNull
   public final RecyclerView rvExercises;
@@ -40,12 +40,12 @@ public final class ActivityRoutinesBinding implements ViewBinding {
   public final TextView tvEmpty;
 
   private ActivityRoutinesBinding(@NonNull LinearLayout rootView, @NonNull Button btnAdd,
-      @NonNull Button btnPickDate, @NonNull LinearLayout routinesRoot,
+      @NonNull Button btnPickDate, @NonNull LinearLayout rootRoutines,
       @NonNull RecyclerView rvExercises, @NonNull TextView tvDate, @NonNull TextView tvEmpty) {
     this.rootView = rootView;
     this.btnAdd = btnAdd;
     this.btnPickDate = btnPickDate;
-    this.routinesRoot = routinesRoot;
+    this.rootRoutines = rootRoutines;
     this.rvExercises = rvExercises;
     this.tvDate = tvDate;
     this.tvEmpty = tvEmpty;
@@ -90,7 +90,7 @@ public final class ActivityRoutinesBinding implements ViewBinding {
         break missingId;
       }
 
-      LinearLayout routinesRoot = (LinearLayout) rootView;
+      LinearLayout rootRoutines = (LinearLayout) rootView;
 
       id = R.id.rvExercises;
       RecyclerView rvExercises = ViewBindings.findChildViewById(rootView, id);
@@ -110,7 +110,7 @@ public final class ActivityRoutinesBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityRoutinesBinding((LinearLayout) rootView, btnAdd, btnPickDate, routinesRoot,
+      return new ActivityRoutinesBinding((LinearLayout) rootView, btnAdd, btnPickDate, rootRoutines,
           rvExercises, tvDate, tvEmpty);
     }
     String missingId = rootView.getResources().getResourceName(id);

@@ -10,29 +10,49 @@ class ExerciseAdapter(
     private val onEdit: (Exercise) -> Unit
 ) : RecyclerView.Adapter<ExerciseAdapter.VH>() {
 
-    private var items: List<Exercise> = emptyList()
+    private val items = mutableListOf<Exercise>()
 
-    fun submit(newItems: List<Exercise>) {
-        items = newItems
+    fun submit(list: List<Exercise>) {
+        items.clear()
+        items.addAll(list)
         notifyDataSetChanged()
     }
 
-    class VH(val binding: ItemExerciseBinding) : RecyclerView.ViewHolder(binding.root)
+    inner class VH(val b: ItemExerciseBinding) : RecyclerView.ViewHolder(b.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
-        val inf = LayoutInflater.from(parent.context)
-        return VH(ItemExerciseBinding.inflate(inf, parent, false))
-    }
-
-    override fun onBindViewHolder(holder: VH, position: Int) {
-        val e = items[position]
-        holder.binding.tvTitle.text = e.name
-        holder.binding.tvSubtitle.text =
-            "${e.muscleGroup} • ${e.sets} x ${e.reps} • ${e.weightKg} kg • descanso ${e.restSec}s"
-
-        holder.binding.btnComplete.setOnClickListener { onComplete(e) }
-        holder.binding.btnEdit.setOnClickListener { onEdit(e) }
+        val b = ItemExerciseBinding.inflate(
+            LayoutInflater.from(parent.context), parent, false
+        )
+        return VH(b)
     }
 
     override fun getItemCount(): Int = items.size
+
+    override fun onBindViewHolder(holder: VH, position: Int) {
+        val ex = items[position]
+
+        holder.b.tvTitle.text = ex.name
+
+        val subtitle = buildString {
+            if (ex.muscleGroup.isNotBlank()) append(ex.muscleGroup)
+            if (ex.sets > 0 && ex.reps > 0) {
+                if (isNotEmpty()) append(" • ")
+                append("${ex.sets}x${ex.reps}")
+            }
+            if (ex.weightKg > 0.0) {
+                if (isNotEmpty()) append(" • ")
+                append("${ex.weightKg} kg")
+            }
+            if (ex.restSec > 0) {
+                if (isNotEmpty()) append(" • ")
+                append("${ex.restSec}s")
+            }
+        }
+        holder.b.tvSubtitle.text = subtitle
+
+        holder.b.btnComplete.isEnabled = !ex.done
+        holder.b.btnComplete.setOnClickListener { onComplete(ex) }
+        holder.b.btnEdit.setOnClickListener { onEdit(ex) }
+    }
 }

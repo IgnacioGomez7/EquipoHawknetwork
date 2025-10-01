@@ -3257,6 +3257,7 @@ id enterAlwaysCollapsed
 id escape
 id etConfirm
 id etEmail
+id etGroup
 id etName
 id etNombre
 id etPass
@@ -3448,8 +3449,9 @@ id right
 id rightToLeft
 id right_icon
 id right_side
+id root
+id rootRoutines
 id rounded
-id routinesRoot
 id row_index_key
 id rvExercises
 id save_non_transition_alpha
@@ -3724,6 +3726,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_add_exercise
+layout dialog_exercise
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_exercise

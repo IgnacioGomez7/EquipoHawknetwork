@@ -3256,6 +3256,7 @@ int id enterAlwaysCollapsed 0x7f0800ab
 int id escape 0x7f0800ac
 int id etConfirm 0x7f0800ad
 int id etEmail 0x7f0800ae
+int id etGroup 0x7f0801fc
 int id etName 0x7f0801ef
 int id etNombre 0x7f0800af
 int id etPass 0x7f0800b0
@@ -3447,8 +3448,9 @@ int id right 0x7f080165
 int id rightToLeft 0x7f080166
 int id right_icon 0x7f080167
 int id right_side 0x7f080168
+int id root 0x7f080200
+int id rootRoutines 0x7f0801fd
 int id rounded 0x7f080169
-int id routinesRoot 0x7f0801f4
 int id row_index_key 0x7f08016a
 int id rvExercises 0x7f0801f5
 int id save_non_transition_alpha 0x7f08016b
@@ -3723,6 +3725,7 @@ int layout design_navigation_menu_item 0x7f0b002e
 int layout design_text_input_end_icon 0x7f0b002f
 int layout design_text_input_start_icon 0x7f0b0030
 int layout dialog_add_exercise 0x7f0b0071
+int layout dialog_exercise 0x7f0b0073
 int layout ime_base_split_test_activity 0x7f0b0031
 int layout ime_secondary_split_test_activity 0x7f0b0032
 int layout item_exercise 0x7f0b0072

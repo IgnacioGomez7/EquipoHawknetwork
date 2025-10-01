@@ -1,55 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/routinesRoot"
-    android:orientation="vertical"
-    android:padding="16dp"
+    android:id="@+id/rootRoutines"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <TextView
         android:id="@+id/tvDate"
-        android:text="Rutinas de yyyy-MM-dd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rutinas de ..."
         android:textStyle="bold"
-        android:textSize="18sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:textSize="18sp"/>
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
 
         <Button
             android:id="@+id/btnPickDate"
-            android:text="Cambiar fecha"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Elegir fecha" />
 
         <Button
             android:id="@+id/btnAdd"
-            android:text="Agregar ejercicio"
-            android:layout_marginStart="8dp"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agregar"
+            android:layout_marginStart="16dp" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/tvEmpty"
-        android:text="Día de descanso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Día de descanso 😴"
         android:visibility="gone"
-        android:textStyle="italic"
-        android:paddingTop="24dp"
-        android:gravity="center_horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_marginTop="12dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvExercises"
-        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="8dp"
         android:layout_weight="1"/>
 </LinearLayout>
